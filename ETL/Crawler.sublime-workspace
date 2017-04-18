@@ -1,0 +1,447 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"M",
+				"MongoClient\tclass"
+			],
+			[
+				"date",
+				"datetime"
+			],
+			[
+				"js",
+				"jsonOut\tfunction"
+			],
+			[
+				"get",
+				"getArticle\tfunction"
+			],
+			[
+				"fin",
+				"find_all\tfunction"
+			],
+			[
+				"arti",
+				"articles\tstatement"
+			],
+			[
+				"art_",
+				"art_url\tparam"
+			],
+			[
+				"art",
+				"art_date"
+			],
+			[
+				"isbn",
+				"isbns"
+			],
+			[
+				"getELE",
+				"getElementsByTagName\t( localName: DOMString ): HTMLCollection Document"
+			],
+			[
+				"getE",
+				"getElementsByTagName\t( localName: DOMString ): HTMLCollection Document"
+			],
+			[
+				"do",
+				"doFirst"
+			],
+			[
+				"a",
+				"ajax"
+			],
+			[
+				"foo",
+				"foodArray"
+			],
+			[
+				"food",
+				"foodArray"
+			],
+			[
+				"fa",
+				"fadeIn"
+			],
+			[
+				"fade",
+				"fadeOut"
+			],
+			[
+				"fun",
+				"function〔keyword〕"
+			],
+			[
+				"im",
+				"img"
+			],
+			[
+				"img",
+				"imgBoard"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "# Connect to MongoDB and insesrt data\n# Build by Tea\n\nfrom pymongo import MongoClient\nimport pymongo\n\nclient = MongoClient('10.120.28.55', 27017)\n",
+			"file": "toMongoDB.py",
+			"file_size": 151,
+			"file_write_time": 131369907169570034,
+			"settings":
+			{
+				"buffer_size": 146,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "# Connect to MongoDB and insesrt data"
+			}
+		}
+	],
+	"build_system": "Anaconda Python Builder",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Anaconda Python Builder",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 482.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"SublimeREPL",
+				"SublimeREPL: Python"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 648.0
+	},
+	"console":
+	{
+		"height": 249.0,
+		"history":
+		[
+			"open jupyter notebook",
+			"open ipython notebook",
+			"Open IPython Notebook",
+			"Open Ipython Notebook",
+			"open ipython notebook"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL"
+	],
+	"file_history":
+	[
+		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/getNYT.py",
+		"/C/Users/達翰/Desktop/Sublime Text Portable/Data/Packages/Anaconda/Default (Windows).sublime-keymap",
+		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/getCNN.py",
+		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/getBBC.py",
+		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/crawlerTest.py",
+		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/toJsonFile.py",
+		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/Crawler.sublime-project",
+		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/getNYT.ipynb",
+		"/D/Anaconda3_4.3.1/lib/site-packages/bs4/__init__.py",
+		"/C/Users/達翰/Desktop/Sublime Text Portable/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/D/Anaconda3_4.3.1/lib/datetime.py",
+		"/C/Users/達翰/Desktop/Sublime Text Portable/Data/Packages/IPython Notebook/README.md",
+		"/C/Users/達翰/Desktop/Sublime Text Portable/Data/Packages/IPython Notebook/SublimeIPythonNotebook.sublime-settings",
+		"/C/Users/達翰/Desktop/Sublime Text Portable/Data/Packages/User/SublimeIPythonNotebook.sublime-settings",
+		"/C/xampp/htdocs/foodstore/index.html",
+		"/C/xampp/htdocs/foodstore/foodstore.php",
+		"/C/xampp/htdocs/foodstore/foodstore.js",
+		"/C/xampp/htdocs/bookstore/bookstore.xml",
+		"/C/xampp/htdocs/bookstore/index.html",
+		"/C/xampp/htdocs/bookstore/bookstore.js",
+		"/C/Users/達翰/Desktop/test.py",
+		"/C/Users/達翰/Downloads/foodstore.php",
+		"/C/Users/達翰/Downloads/foodstore.js",
+		"/C/Users/達翰/Dropbox/Web/web/jQuery/css/style.css",
+		"/C/Users/達翰/Dropbox/Web/web/jQuery/13_new.js",
+		"/C/Users/達翰/Dropbox/Web/web/jQuery/23_appendTo.html",
+		"/C/Users/達翰/Dropbox/Web/web/jQuery/22_append.html",
+		"/C/Users/達翰/Dropbox/Web/web/jQuery/21_fadeTo.html",
+		"/C/Users/達翰/Dropbox/Web/web/jQuery/20_fadeInOut.html",
+		"/C/Users/達翰/Dropbox/Web/web/jQuery/24_clone.html",
+		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/getCNN.ipynb",
+		"/C/Users/達翰/Dropbox/Web/web/jQuery/19_animation.html",
+		"/C/Users/達翰/Dropbox/Web/web/jQuery/18_slideToggle.html",
+		"/C/Users/達翰/Downloads/style (2).css",
+		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/getVOA.ipynb",
+		"/C/Users/達翰/Dropbox/Web/web/jQuery/17_topMessage.html",
+		"/C/Users/達翰/Desktop/Sublime Text Portable/Data/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/C/Users/達翰/Desktop/Sublime Text Portable/Data/Packages/User/SublimeREPL.sublime-settings"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"articlesList",
+			"d",
+			"url_dict",
+			"articleList",
+			"paragraph_dict",
+			"article_dict",
+			"textCollection",
+			"url_dict",
+			"articleList",
+			"]:\n",
+			"1",
+			"    ",
+			"retur",
+			"ajax",
+			"fadeOut"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "C:\\Users\\達翰\\Dropbox\\Tea\\python\\Project\\ETL"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "toMongoDB.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								146,
+								146
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"auto_name": "# Connect to MongoDB and insesrt data",
+							"is_init_dirty_state": false,
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 207.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 154.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\達翰\\Dropbox\\Web\\web\\jQuery\\18_slideToggle.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 162.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

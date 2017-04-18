@@ -1,97 +1,61 @@
-
-# coding: utf-8
-
-# In[1]:
-
-get_ipython().system('pip install requests')
-get_ipython().system('pip install beautifulsoup4')
-get_ipython().system('pip install lxml')
-
-
-# In[2]:
+# Get NewYorkTimes news
+# Build by Tea
 
 from bs4 import BeautifulSoup
 import lxml
 import requests as r
-import json
-from datetime import date
-from datetime import timedelta
-import json
+import datetime as d
 
 
-# In[23]:
+# Get urls list of x days ... range(-x,0)
+def getArticlesList(nDays):
 
-#Get urls list of x days ... range(-x,0)
-def getArticleList(nDays):
-    
-    articleList = []
-    
-    for delta in range(-nDays,0):
-        
-        day = date.today() + timedelta(delta)
-        daily_url = 'http://www.nytimes.com/indexes/' + day.strftime('%Y/%m/%d') + '/todayspaper/index.html'
-        
+    articlesList = []
+
+    for delta in range(90, nDays):
+
+        date = (d.date.today() - d.timedelta(delta)).strftime('%Y/%m/%d')
+        daily_url = 'http://www.nytimes.com/indexes/%s/todayspaper/index.html'%(date)
+
         res = r.get(daily_url)
-        res.encoding='unicode'
-        soup = BeautifulSoup(res.text,'lxml')
-        articles = soup.select('#SpanABMiddleRegion h6 a')
-        
-        for num in range(len(articles)):
-            url_dict = {}
-            
-            url_dict['title'] = articles[num].text.strip()
-            url_dict['date'] = day.strftime('%Y/%m/%d')
-            url_dict['source'] = 'NYT'
-            url_dict['url'] = articles[num]['href']
-            articleList.append(url_dict)
+        res.encoding = 'unicode'
+        soup = BeautifulSoup(res.text, 'lxml')
+        articles = soup.select('.aColumn h6 a') + soup.select(
+            '.aColumn h3 a') + soup.select('#SpanABMiddleRegion h6 a')
 
-    return articleList
+        for article in articles:
+            art_dict = {}
 
+            art_dict['title'] = article.text.strip()
+            art_dict['date'] = date
+            art_dict['source'] = 'NYT'
+            art_dict['url'] = article['href']
+            articlesList.append(art_dict)
 
-# In[25]:
-
-#Get single article content
-def addContent(articleList):
-    
-    textCollection = []    #output list
-    
-    for num in range(len(articleList)):
-                
-        res = r.get(articleList[num]['url'])
-        res.encoding='unicode'
-        soup = BeautifulSoup(res.text,'lxml')
-        contents = soup.select('.story-body-supplemental .story-body-text.story-content')
-        
-        paragraph_dict = {} 
-        for numPara in range(len(contents)):
-            paragraph_dict[numPara+1] = contents[numPara].text.strip()
-        
-        article_dict = {}    #store hole article details
-        article_dict['title'] = articleList[num]['title']
-        article_dict['date'] = articleList[num]['date']
-        article_dict['source'] = articleList[num]['source']
-        article_dict['url'] = articleList[num]['url']
-        article_dict['content'] = paragraph_dict
-        
-        textCollection.append(article_dict)
-            
-    return textCollection
+    return articlesList
 
 
-# In[29]:
+# Get a signle article content
+def getArticle(art_url):
 
-def jsonOut(dict):
-    with open('contents.json', 'w') as f:
-        json.dump(dict, f)
+    art_dict = {}
 
+    res = r.get(art_url)
+    res.encoding = 'unicode'
+    soup = BeautifulSoup(res.text, 'lxml')
+    art_date = art_date = soup.select('.dateline')[0]['content'].split('T')[0]
+    art_title = soup.select('#headline')[0].text
+    art_body = soup.select(
+        '.story-body-supplemental .story-body-text.story-content')
 
-# In[30]:
+    art_paras = {}
+    for numPara in range(len(art_body)):
+        art_paras[numPara + 1] = art_body[numPara].text.strip()
 
-#debug, choose 2 articles for test
-len(getArticleList(1))
-test = []
-for i in range(0,2):
-    test.append(getArticleList(1)[i])
-addContent(test)
-jsonOut(addContent(test))
+    art_dict['title'] = art_title
+    art_dict['date'] = art_date
+    art_dict['source'] = 'NYT'
+    art_dict['url'] = art_url
+    art_dict['content'] = art_paras
 
+    return art_dict
