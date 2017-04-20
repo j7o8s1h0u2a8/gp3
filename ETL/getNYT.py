@@ -15,10 +15,10 @@ def getArticlesList(nDays):
     for delta in range(90, nDays):
 
         date = (d.date.today() - d.timedelta(delta)).strftime('%Y/%m/%d')
-        daily_url = 'http://www.nytimes.com/indexes/%s/todayspaper/index.html'%(date)
+        daily_url = 'http://www.nytimes.com/indexes/%s/todayspaper/index.html' % (date)
 
         res = r.get(daily_url)
-        res.encoding = 'unicode'
+        res.encoding = 'utf-8'
         soup = BeautifulSoup(res.text, 'lxml')
         articles = soup.select('.aColumn h6 a') + soup.select(
             '.aColumn h3 a') + soup.select('#SpanABMiddleRegion h6 a')
@@ -41,16 +41,20 @@ def getArticle(art_url):
     art_dict = {}
 
     res = r.get(art_url)
-    res.encoding = 'unicode'
+    res.encoding = 'utf-8'
     soup = BeautifulSoup(res.text, 'lxml')
-    art_date = art_date = soup.select('.dateline')[0]['content'].split('T')[0]
-    art_title = soup.select('#headline')[0].text
-    art_body = soup.select(
-        '.story-body-supplemental .story-body-text.story-content')
+
+    try:
+        art_date = soup.select('.dateline')[0]['content'].split('T')[0]
+    except:
+        art_date = d.datetime.today().strftime('%Y/%m/%d')
+
+    art_title = soup.title.text.split(' - ')[0].strip()
+    art_body = soup.select('.story-body-text')
 
     art_paras = {}
     for numPara in range(len(art_body)):
-        art_paras[numPara + 1] = art_body[numPara].text.strip()
+        art_paras[str(numPara + 1)] = art_body[numPara].text.strip()
 
     art_dict['title'] = art_title
     art_dict['date'] = art_date

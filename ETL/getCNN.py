@@ -91,7 +91,7 @@ def getArticle(art_url):
 
     art_paras = {}
     for numPara in range(len(art_body)):
-        art_paras[numPara + 1] = art_body[numPara].text.strip()
+        art_paras[str(numPara+1)] = art_body[numPara].text.strip()
 
     art_dict['title'] = art_title
     art_dict['url'] = art_url

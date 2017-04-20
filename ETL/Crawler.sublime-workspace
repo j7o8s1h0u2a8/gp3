@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"art",
+				"art_dict\tstatement"
+			],
+			[
 				"M",
 				"MongoClient\tclass"
 			],
@@ -30,10 +34,6 @@
 			[
 				"art_",
 				"art_url\tparam"
-			],
-			[
-				"art",
-				"art_date"
 			],
 			[
 				"isbn",
@@ -88,16 +88,30 @@
 	"buffers":
 	[
 		{
-			"contents": "# Connect to MongoDB and insesrt data\n# Build by Tea\n\nfrom pymongo import MongoClient\nimport pymongo\n\nclient = MongoClient('10.120.28.55', 27017)\n",
 			"file": "toMongoDB.py",
-			"file_size": 151,
-			"file_write_time": 131369907169570034,
 			"settings":
 			{
-				"buffer_size": 146,
+				"buffer_size": 191,
 				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "# Connect to MongoDB and insesrt data"
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "toMySQL.py",
+			"settings":
+			{
+				"buffer_size": 1490,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "getBBC.py",
+			"settings":
+			{
+				"buffer_size": 1778,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -152,10 +166,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 482.0,
-		"last_filter": "install",
+		"height": 490.0,
+		"last_filter": "Package Control: ",
 		"selected_items":
 		[
+			[
+				"Package Control: ",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -207,8 +225,10 @@
 	"file_history":
 	[
 		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/getNYT.py",
-		"/C/Users/達翰/Desktop/Sublime Text Portable/Data/Packages/Anaconda/Default (Windows).sublime-keymap",
 		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/getCNN.py",
+		"/C/Users/達翰/Dropbox/Tea/python/Extract_novel.ipynb",
+		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/toMongoDB.py",
+		"/C/Users/達翰/Desktop/Sublime Text Portable/Data/Packages/Anaconda/Default (Windows).sublime-keymap",
 		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/getBBC.py",
 		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/crawlerTest.py",
 		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/toJsonFile.py",
@@ -261,6 +281,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"datetime",
+			"art_info",
 			"articlesList",
 			"d",
 			"url_dict",
@@ -299,7 +321,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -308,15 +330,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 146,
+						"buffer_size": 191,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								146,
-								146
+								191,
+								191
 							]
 						],
 						"settings":
@@ -330,21 +352,88 @@
 								{
 									"characters": ".",
 									"selector": "source.python - string - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
 								}
 							],
-							"auto_name": "# Connect to MongoDB and insesrt data",
-							"is_init_dirty_state": false,
+							"is_init_dirty_state": true,
+							"origin_encoding": "ASCII",
 							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "toMySQL.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1490,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								889,
+								889
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "getBBC.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1778,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1563,
+								1563
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1008.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -383,7 +472,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 207.0
+		"height": 360.0
 	},
 	"output.find_results":
 	{
@@ -439,7 +528,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 162.0,
+	"side_bar_width": 234.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
