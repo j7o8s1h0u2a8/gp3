@@ -87,33 +87,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "toMongoDB.py",
-			"settings":
-			{
-				"buffer_size": 191,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "toMySQL.py",
-			"settings":
-			{
-				"buffer_size": 1490,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "getBBC.py",
-			"settings":
-			{
-				"buffer_size": 1778,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Anaconda Python Builder",
 	"build_system_choices":
@@ -220,16 +193,18 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL"
 	],
 	"file_history":
 	[
+		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/getBBC.py",
+		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/toMongoDB.py",
+		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/textmining.py",
+		"/C/Users/達翰/Dropbox/Tea/python/Project/TextProcessing/news.news.json",
+		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/toMySQL.py",
 		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/getNYT.py",
 		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/getCNN.py",
 		"/C/Users/達翰/Dropbox/Tea/python/Extract_novel.ipynb",
-		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/toMongoDB.py",
 		"/C/Users/達翰/Desktop/Sublime Text Portable/Data/Packages/Anaconda/Default (Windows).sublime-keymap",
-		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/getBBC.py",
 		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/crawlerTest.py",
 		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/toJsonFile.py",
 		"/C/Users/達翰/Dropbox/Tea/python/Project/ETL/Crawler.sublime-project",
@@ -321,121 +296,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "toMongoDB.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 191,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								191,
-								191
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								}
-							],
-							"is_init_dirty_state": true,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "toMySQL.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1490,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								889,
-								889
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.python - string - comment - constant.numeric"
-								},
-								{
-									"characters": ".",
-									"selector": "source.python - string - constant.numeric"
-								}
-							],
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 432.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "getBBC.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1778,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1563,
-								1563
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1008.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		}
 	],

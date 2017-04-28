@@ -1,10 +1,12 @@
-import sys
 import pymysql
 from pymongo import MongoClient
 import pymongo
-import datetime
 
 import getNYT as gn
+
+
+# Get article list and insert to MySQL
+gn.listToMySQL()
 
 
 # Get connection to MySQL@10.120.28.52
@@ -32,7 +34,7 @@ except:
 
 # Get unread url from cklist table
 records = c.execute(
-    """SELECT url FROM cklist WHERE source = 'NYT' AND tag = 'N' LIMIT 50""")
+    """SELECT url FROM cklist WHERE source = 'NYT' AND tag = 'N'""")
 print('Get %s records.' % (records))
 
 urls = []
