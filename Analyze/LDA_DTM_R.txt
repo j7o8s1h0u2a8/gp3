@@ -1,0 +1,38 @@
+> install.packages("proxy")
+> install.packages("tm")
+library("slam")
+
+
+> wordlist = scan(file="wordlist.txt","")
+
+> kwlist = read.csv("kwlist.csv" , sep = "," , header = FALSE)
+
+> texts =paste(kwlist$V2,kwlist$V3,kwlist$V4,kwlist$V5,kwlist$V6,kwlist$V7,kwlist$V8,kwlist$V9,kwlist$V10,kwlist$V11,sep=" ")
+
+import lib
+> myCorpus = Corpus(VectorSource(texts))
+
+> tdm = TermDocumentMatrix(myCorpus, control = list(dictionary=wordlist))
+> dtm = DocumentTermMatrix(myCorpus, control = list(dictionary=wordlist))
+
+
+> inspect(dtm)
+
+> cosine_dist_mat = 1 - crossprod_simple_triplet_matrix(dtm)/(sqrt(col_sums(dtm^2) %*% t(col_sums(dtm^2))))
+Error: cannot allocate vector of size 1428.3 Gb
+
+
+> burnin = 4000
+> iter = 2000
+> thin = 500
+> nstart = 5
+> seed = list(2003,5,63,100001,765)
+> best = TRUE
+> K = 10
+> ldaOut = LDA(dtm,K,method = "Gibbs", control = list(nstart=nstart, seed=seed, best=best, burnin=burnin, iter=iter,thin=thin))
+
+
+
+tdm <- TermDocumentMatrix(crude,
+                          control = list(removePunctuation = TRUE,
+                                         stopwords = TRUE))

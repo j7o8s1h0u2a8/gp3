@@ -29,7 +29,7 @@ try:
   db = client['news']
   collection = db['news']
 except:
-  print('Cannot connect to MySQL server!')
+  print('Cannot connect to Mongo server!')
 
 
 # Get unread url from cklist table
