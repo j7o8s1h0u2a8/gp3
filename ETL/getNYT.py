@@ -7,7 +7,7 @@ import requests as r
 import datetime as d
 import pymysql
 import sys
-
+import re
 
 # Get article list from daily news, give a date in yyyy/mm/dd format
 def getDailyArticles(date):
@@ -82,7 +82,8 @@ def getArticle(art_url):
 
     art_paras = {}
     for numPara in range(len(art_body)):
-        art_paras[str(numPara + 1)] = art_body[numPara].text.strip()
+        para = re.sub("[“”’]",'\'', art_body[numPara].text.strip())
+        art_paras[str(numPara + 1)] = para
 
     art_dict['title'] = art_title
     art_dict['date'] = art_date
@@ -99,9 +100,9 @@ def listToMySQL():
 
     # Connect to MySQL
     try:
-        conn = pymysql.connect(host='10.120.28.52',
-                               user='gp3',
-                               password='Group_03',
+        conn = pymysql.connect(host='127.0.0.1',
+                               user='root',
+                               password='m123456',
                                db='gp3',
                                charset='utf8',
                                autocommit=True,

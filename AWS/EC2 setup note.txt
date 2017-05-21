@@ -1,0 +1,17 @@
+sudo yum update
+uname -a
+sudo yum install -y git
+
+sudo yum install -y epel-release
+sudo yum install -y python34-setuptools
+sudo easy_install-3.4 pip
+
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash
+. ~/.nvm/nvm.sh
+nvm install 6.10.2
+node --version
+
+mkdir test
+cd test
+npm init
+npm install express --save

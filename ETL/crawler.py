@@ -11,9 +11,9 @@ gn.listToMySQL()
 
 # Get connection to MySQL@10.120.28.52
 try:
-  conn = pymysql.connect(host='10.120.28.52',
-                         user='gp3',
-                         password='Group_03',
+  conn = pymysql.connect(host='127.0.0.1',
+                         user='root',
+                         password='m123456',
                          db='gp3',
                          charset='utf8',
                          autocommit=True,
@@ -25,8 +25,8 @@ except:
 
 # Get connection to MongoDB@10.120.28.55
 try:
-  client = MongoClient('10.120.28.55', 27017)
-  db = client['news']
+  client = MongoClient('127.0.0.1', 27017)
+  db = client['MyTest']
   collection = db['news']
 except:
   print('Cannot connect to Mongo server!')

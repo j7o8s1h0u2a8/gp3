@@ -76,12 +76,11 @@ def update_DB_news(art_id, wds_info, DB_news):
 def wc(swlist, connection):
     info('Child Process for wc()')
 
-    db = connection.news
+    db = connection.MyTest
     DB_news = db['news']
     DB_word_dict = db['word_dict']
 
     article = DB_news.find_one_and_update({'counted': {'$exists': False}},{'$set':{'counted':'Processing...'}})
-    # article = DB_news.find_one({"_id" : ObjectId('59088179f5dbe30006dd1812')})
     content = article['content']
     art_id = article['_id']
 
@@ -109,9 +108,6 @@ def wc(swlist, connection):
 
     print('\tart_id: %s wordcount finished with %s words.' % (art_id,n))
 
-    # message = '\tart_id: %s wordcount finished with %s words.' % (art_id,n)
-    # return message    
-
 
 
 def info(title):
@@ -121,7 +117,6 @@ def info(title):
     # print('process id:', os.getpid())
 
 def run(swlist):
-    # swlist = defineStopWords()
     connection = pymongo.MongoClient('127.0.0.1', 27017, maxPoolSize=10)
     wc(swlist, connection)
 
@@ -131,19 +126,6 @@ if __name__ == '__main__':
     info('Parent Process')
     tStart = time.time()
     with multiprocessing.Pool(4) as p:
-        p.map(run, [swlist for i in range(24830)])
+        p.map(run, [swlist for i in range(95)])
     tEnd = time.time()
     print('Cost %f seconds.'%(tEnd-tStart))
-
-
-
-
-# if __name__ == '__main__':
-#     swlist = defineStopWords()
-#     info('Parent Process')
-#     tStart = time.time()
-#     with multiprocessing.Pool(5) as p:
-#         for i in range(5):
-#             p.map(run(swlist))    
-#     tEnd = time.time()
-#     print('Cost %f seconds.'%(tEnd-tStart))

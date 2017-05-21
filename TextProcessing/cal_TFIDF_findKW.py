@@ -30,14 +30,9 @@ def findkeywords(wordset, DB_word_dict):
     return dict(kw_TFIDF)
 
 
-# 新增 DB_art_keywords中該文章 keywords欄位
-def updateKWs(wordset, kw_TFIDF, DB_art_keywords):
-    DB_art_keywords.update_many({'_id':wordset['_id']}, {'$set':{'keywords':kw_TFIDF}}, upsert=True)
-    # print('{} is updated keywords!'.format(wordset['_id']))
-
 
 connection = pymongo.MongoClient('127.0.0.1',27017)
-db = connection['news']
+db = connection['MyTest']
 DB_art_keywords = db['art_keywords']
 DB_word_dict = db['word_dict']
 
@@ -52,6 +47,6 @@ count = 1
 
 for wordset in wordsets:
     kw_TFIDF = findkeywords(wordset, DB_word_dict)
-    updateKWs(wordset, kw_TFIDF, DB_art_keywords)
-    print(count, ' is updated keywords!')
+    DB_art_keywords.update_many({'_id':wordset['_id']}, {'$set':{'keywords':kw_TFIDF}}, upsert=True)
+    print(count, wordset['_id'], ' is updated keywords!')
     count += 1
